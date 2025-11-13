@@ -22,4 +22,9 @@
     <style name="Theme.ShowcaseApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ShowcaseApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    
+    <style name="RoundImg">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
 </resources>

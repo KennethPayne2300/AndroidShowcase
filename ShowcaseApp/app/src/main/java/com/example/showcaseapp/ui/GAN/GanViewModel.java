@@ -1,16 +1,15 @@
-package com.example.showcaseapp.ui.SciFiNameGen;
+package com.example.showcaseapp.ui.GAN;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SciFiNameGenViewModel extends ViewModel {
-
+public class GanViewModel extends ViewModel {
     private final MutableLiveData<String> mText;
 
-    public SciFiNameGenViewModel() {
+    public GanViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is SciFi fragment");
+        mText.setValue("This is GAN fragment");
     }
 
     public LiveData<String> getText() {

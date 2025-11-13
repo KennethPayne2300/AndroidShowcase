@@ -1,4 +1,4 @@
-package com.example.showcaseapp.ui.MadLib;
+package com.example.showcaseapp.ui.GAN;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.showcaseapp.databinding.FragmentMadlibBinding;
+import com.example.showcaseapp.databinding.FragmentGanBinding;
 
-public class MadLibFragment extends Fragment {
+public class ganFragment extends Fragment {
 
-    private FragmentMadlibBinding binding;
+    private FragmentGanBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        MadLibViewModel madLibViewModel =
-                new ViewModelProvider(this).get(MadLibViewModel.class);
+        GanViewModel GanViewModel =
+                new ViewModelProvider(this).get(GanViewModel.class);
 
-        binding = FragmentMadlibBinding.inflate(inflater, container, false);
+        binding = FragmentGanBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        madLibViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textGan;
+        GanViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

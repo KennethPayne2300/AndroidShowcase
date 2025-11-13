@@ -22,4 +22,10 @@
         android:name="com.example.showcaseapp.ui.SciFiNameGen.SciFiNameGenFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_scifinamegen" />
+
+    <fragment
+        android:id="@+id/nav_gan"
+        android:name="com.example.showcaseapp.ui.GAN.ganFragment"
+        android:label="@string/menu_gan"
+        tools:layout="@layout/fragment_gan"/>
 </navigation>
