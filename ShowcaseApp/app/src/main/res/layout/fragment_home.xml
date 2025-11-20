@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
@@ -16,14 +17,45 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textColor="#e6b52f"
-        android:textSize="80sp"/>
+        android:textSize="70sp"
+        android:text="About Me"/>
 
-    <ImageView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="fill"
+        android:background="@drawable/layout_background"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+<!--            ChatGPT helped get this-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/Headshot5"
+                app:contentPaddingTop="90dp"
+                app:shapeAppearanceOverlay="@style/RoundImg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I am Kenneth Payne, A Computer Science student, and a lover of ninjago, I have 9 siblings, I'm always looking to learn, and improve my skills. I've been told I have a great imagination, just sometimes I don't know how to explain the things I think of, especially not my dreams."
+                android:padding="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="160dp"
-        android:src="@drawable/Headshot5"
-        android:scaleType="centerInside"
-        android:layout_margin="20dp"
-        app:shapeAppearenceOverlay="@style/RoundImg"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="fill">
+
+    </LinearLayout>
 
 </LinearLayout>
