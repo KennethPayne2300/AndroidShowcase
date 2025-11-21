@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="5dp"
+    android:background="#1ff0a4"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
@@ -17,16 +18,17 @@
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
         android:textColor="#e6b52f"
-        android:textSize="70sp"
+        android:textSize="60sp"
         android:text="About Me"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="fill"
+        android:layout_gravity="fill_horizontal"
         android:background="@drawable/layout_background"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_marginBottom="40dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,6 +41,8 @@
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/Headshot5"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 app:contentPaddingTop="90dp"
                 app:shapeAppearanceOverlay="@style/RoundImg" />
 
@@ -54,34 +58,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:background="@drawable/layout_background"
-        android:padding="20dp"
-        android:layout_gravity="fill">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/MyBackground" />
+        android:padding="10dp"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:layout_margin="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:textColor="#0f5ff8"
                 android:text="I have made this collage of characters and objects from my favorite shows and games, which basically just include my hobbies, which are: "
-                android:padding="10dp"/>
+                android:padding="10dp"
+                android:layout_weight="1"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/HobbiesList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:src="@drawable/mybackground" />
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#0f5ff8"
+            android:text="1. Playing Video Games&#xA;2. 3d modeling&#xA;3. 3d Printing&#xA;4. watching shows&#xA;5. playing outside"
+            android:padding="15dp"
+            android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
 
