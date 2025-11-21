@@ -17,7 +17,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:textColor="#e6b52f"
+        android:textColor="#a14065"
         android:textSize="60sp"
         android:text="About Me"/>
 
@@ -40,7 +40,7 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/Headshot5"
+                android:src="@drawable/headshot5"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 app:contentPaddingTop="90dp"

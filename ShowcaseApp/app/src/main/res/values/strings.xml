@@ -11,4 +11,5 @@
     <string name="menu_gallery">MadLib</string>
     <string name="menu_slideshow">SciFi Name Generator</string>
     <string name="menu_gan">Guess A Number</string>
+    <string name="generate">Generate</string>
 </resources>
