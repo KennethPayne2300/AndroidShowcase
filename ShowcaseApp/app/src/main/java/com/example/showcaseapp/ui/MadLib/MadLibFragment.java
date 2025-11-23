@@ -24,8 +24,8 @@ public class MadLibFragment extends Fragment {
         binding = FragmentMadlibBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        madLibViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textGallery;
+//        madLibViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
