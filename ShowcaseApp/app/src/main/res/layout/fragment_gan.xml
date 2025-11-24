@@ -1,22 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="#1ff0a4"
+    tools:context=".ui.GAN.GANFragment">
 
     <TextView
-        android:id="@+id/text_gan"
+        style="@style/TitleTXTStyle"
+        android:text="Guess A Number"/>
+
+    <LinearLayout
+        android:id="@+id/GameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guess a number between 1 and 100"
+            android:textSize="20sp"
+            android:textColor="#f30523"/>
+
+        <EditText
+            android:id="@+id/GuessTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#f70533"
+            android:hint="1-100"/>
+
+        <TextView
+            android:id="@+id/FeedbackTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/GuessBTN"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Guess"
+            android:textAllCaps="false"
+            android:background="@drawable/guess_btn_background"
+            app:backgroundTint="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/NewGameBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Game"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:text="Try Again"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/nav_gan"
-        android:name="com.example.showcaseapp.ui.GAN.ganFragment"
+        android:name="com.example.showcaseapp.ui.GAN.GANFragment"
         android:label="@string/menu_gan"
         tools:layout="@layout/fragment_gan"/>
 </navigation>

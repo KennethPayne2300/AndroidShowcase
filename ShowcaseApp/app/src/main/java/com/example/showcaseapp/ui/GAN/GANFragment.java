@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.showcaseapp.databinding.FragmentGanBinding;
 
-public class ganFragment extends Fragment {
+public class GANFragment extends Fragment {
 
     private FragmentGanBinding binding;
 
