@@ -1,6 +1,7 @@
 package com.example.showcaseapp.ui.GAN;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,11 @@ import com.example.showcaseapp.databinding.FragmentGanBinding;
 
 public class GANFragment extends Fragment {
 
+    public int attempts=10;
+    public int points=0;
+
+    public int secretNumber = (int) (Math.random()*100)+1;
+
     private FragmentGanBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -25,35 +31,57 @@ public class GANFragment extends Fragment {
         binding = FragmentGanBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        int attempts=10;
-        int secretNumber = (int) (Math.random()*100)+1;
+        binding.pointsTXT.setText("Points: 0");
 
         binding.GuessBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TextView guess = binding.GuessTXT;
 
-                try{
-                    int numberGuess = Integer.parseInt(guess.getText().toString());
+                if(attempts<=0){
+                    try{
+                        int numberGuess = Integer.parseInt(guess.getText().toString());
 
-                    if(numberGuess<=100 || numberGuess>0){
-                        if(numberGuess==secretNumber){
-                            attempts=10;
-                            binding.FeedbackTXT.setText("You Got It!!!");
-                        }else if(numberGuess>secretNumber){
-                            attempts--;
-                            binding.FeedbackTXT.setText("Too High");
+                        if(numberGuess<=100 && numberGuess>0){
+                            if(numberGuess==secretNumber){
+                                secretNumber = (int) (Math.random()*100)+1;
+                                points+=(50+(5*(10-attempts)));
+                                Log.d("points: ", attempts+"");
+                                binding.pointsTXT.setText(String.format("Points: %d", points));
+                                binding.FeedbackTXT.setText("You Got It!!!");
+                                attempts=10;
+                            }else if(numberGuess>secretNumber){
+                                attempts--;
+                                binding.FeedbackTXT.setText("Too High");
+                            }else{
+                                attempts--;
+                                binding.FeedbackTXT.setText("Too Low");
+                            }
+                            binding.attemptsTXT.setText(String.format("%d", attempts));
+                            binding.GuessTXT.setText("");
                         }else{
-                            attempts--;
-                            binding.FeedbackTXT.setText("Too Low");
+                            Toast.makeText(getContext(),"needs to be between 1 and 100",Toast.LENGTH_SHORT).show();
                         }
-                        binding.attemptsTXT.setText(attempts);
-                    }else{
-                        Toast.makeText(getContext(),"needs to be between 1 and 100",Toast.LENGTH_SHORT).show();
+                    } catch (NumberFormatException e){
+                        Toast.makeText(getContext(), "Need a number, and can't be a decimal either", Toast.LENGTH_SHORT).show();
                     }
-                } catch (NumberFormatException e){
-                    Toast.makeText(getContext(), "Need a number, and can't be a decimal either", Toast.LENGTH_SHORT).show();
+                } else {
+                    binding.LeadeerBoard.setVisibility(View.VISIBLE);
+                    binding.GameLayout.setVisibility(View.GONE);
                 }
+            }
+        });
+
+        binding.NewGameBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                attempts=10;
+                points=0;
+                binding.FeedbackTXT.setText("");
+                binding.GuessTXT.setText("");
+                binding.pointsTXT.setText("Points: 0");
+                binding.LeadeerBoard.setVisibility(View.GONE);
+                binding.GameLayout.setVisibility(View.VISIBLE);
             }
         });
 
