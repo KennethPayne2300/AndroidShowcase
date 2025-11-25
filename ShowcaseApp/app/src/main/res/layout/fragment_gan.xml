@@ -20,7 +20,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/levelTXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#6203f6"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -73,8 +82,7 @@
                 android:textSize="30sp"
                 android:textColor="#f30523"
                 android:textAlignment="center"
-                android:layout_weight="1"
-                android:text="10"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/FeedbackTXT"
@@ -92,16 +100,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="Points: "
             android:textSize="20sp"
             android:textColor="#af548f"/>
-
-        <TextView
-            android:id="@+id/GameOverTXT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:textColor="#f30523"/>
 
         <Button
             android:id="@+id/GuessBTN"
@@ -115,51 +115,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LeaderBoardLayout"
+        android:id="@+id/GameOverLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:visibility="gone">
 
         <TextView
+            android:id="@+id/GameOverTXT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Game Over"
             android:textColor="#f00"
             android:textSize="40sp"
             android:textAlignment="center"/>
 
-        <LinearLayout
-            android:id="@+id/nameLayout"
+        <ImageView
+            android:id="@+id/gameOverImg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Enter your Name"
-                android:textColor="#7f1af4"
-                android:textAlignment="center"
-                android:textSize="20sp"/>
-
-            <EditText
-                android:id="@+id/NameTXT"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textAlignment="center"
-                android:hint="Ex: Kai Smith"
-                android:textColorHint="#8A1944"
-                android:textColor="#8A1944"/>
-
-        </LinearLayout>
-
-        <GridLayout
-            android:id="@+id/LeadeerBoard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"/>
+            android:layout_height="200dp" />
 
     </LinearLayout>
 
