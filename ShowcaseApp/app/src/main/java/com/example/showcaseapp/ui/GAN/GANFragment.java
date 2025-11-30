@@ -35,6 +35,7 @@ public class GANFragment extends Fragment {
 
         binding.pointsTXT.setText("Points: 0");
         binding.levelTXT.setText("Level: 1");
+        binding.attemptsTXT.setText("10");
 
         binding.GuessBTN.setOnClickListener(new View.OnClickListener() {
             @Override
