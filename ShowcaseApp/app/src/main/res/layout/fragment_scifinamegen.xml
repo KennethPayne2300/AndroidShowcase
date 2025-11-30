@@ -1,22 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SciFiNameGen.SciFiNameGenFragment">
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="#1ff0a4"
+    tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_slideshow"
+        style="@style/TitleTXTStyle"
+        android:id="@+id/text_home"
+        android:text="Sci-fi Name Generator"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
+        android:background="@drawable/layout_background"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="First Name"
+            android:layout_marginLeft="20dp"
+            android:textColor="#2efaf5"/>
+
+        <EditText
+            android:id="@+id/FirstTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_marginRight="20dp"
+            android:hint="Ex: Kenneth"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_background"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Last Name"
+            android:layout_marginLeft="20dp"
+            android:textColor="#2efaf5"/>
+
+        <EditText
+            android:id="@+id/LastTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_marginRight="20dp"
+            android:hint="Ex: Payne"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_background"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="City"
+            android:layout_marginLeft="20dp"
+            android:textColor="#2efaf5"/>
+
+        <EditText
+            android:id="@+id/CityTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_marginRight="20dp"
+            android:hint="Ex: evansville"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_background"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="School"
+            android:layout_marginLeft="20dp"
+            android:textColor="#2efaf5"/>
+
+        <EditText
+            android:id="@+id/SchoolTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_marginRight="20dp"
+            android:hint="Ex: F.J. Rietz Highschool"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_background"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Favorite Food"
+            android:layout_marginLeft="20dp"
+            android:textColor="#2efaf5"/>
+
+        <EditText
+            android:id="@+id/FoodTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_marginRight="20dp"
+            android:hint="Ex: Hot Dog"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_background"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Favorite Character"
+            android:layout_marginLeft="20dp"
+            android:textColor="#2efaf5"/>
+
+        <EditText
+            android:id="@+id/CharTXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_marginRight="20dp"
+            android:hint="Ex: Master Wu"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/generateBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate"
+        android:layout_margin="20dp"
+        android:background="@drawable/new_game_btn"
+        app:backgroundTint="@null"/>
+
+    <TextView
+        android:id="@+id/generatedTXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#b53fd8"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textAlignment="center"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

@@ -24,8 +24,28 @@ public class SciFiNameGenFragment extends Fragment {
         binding = FragmentScifinamegenBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        binding.generateBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!binding.FirstTXT.getText().toString().isEmpty() && !binding.LastTXT.getText().toString().isEmpty() && !binding.CityTXT.getText().toString().isEmpty() && !binding.SchoolTXT.getText().toString().isEmpty() && !binding.FoodTXT.getText().toString().isEmpty() && !binding.CharTXT.getText().toString().isEmpty()){
+                    if(binding.FirstTXT.getText().toString().length()>1 && binding.LastTXT.getText().toString().length()>2 && binding.CityTXT.getText().toString().length()>1 && binding.SchoolTXT.getText().toString().length()>2){
+                        String sciFiFirst = binding.FirstTXT.getText().toString().substring(0,2)+binding.LastTXT.getText().toString().substring(0,3);
+                        String sciFiLast = binding.CityTXT.getText().toString().substring(0,2)+binding.SchoolTXT.getText().toString().substring(0,3);
+                        String sciFiPlanet = binding.FoodTXT.getText().toString()+" "+binding.CharTXT.getText().toString();
+
+                        binding.generatedTXT.setText(String.format("%s %s from the planet %s",sciFiFirst,sciFiLast,sciFiPlanet));
+
+                        binding.FirstTXT.setText("");
+                        binding.LastTXT.setText("");
+                        binding.CityTXT.setText("");
+                        binding.SchoolTXT.setText("");
+                        binding.FoodTXT.setText("");
+                        binding.CharTXT.setText("");
+                    }
+                }
+            }
+        });
+
         return root;
     }
 
