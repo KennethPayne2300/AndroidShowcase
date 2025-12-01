@@ -17,35 +17,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_gravity="fill_horizontal"
         android:background="@drawable/layout_background"
         android:padding="10dp"
-        android:layout_marginBottom="40dp">
+        android:layout_marginBottom="30dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+<!--    ChatGPT helped get this-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/headshot5"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:contentPaddingTop="90dp"
+            app:shapeAppearanceOverlay="@style/RoundImg" />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-<!--            ChatGPT helped get this-->
-            <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/headshot5"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                app:contentPaddingTop="90dp"
-                app:shapeAppearanceOverlay="@style/RoundImg" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#0f5ff8"
-                android:text="I am Kenneth Payne, A Computer Science student, and a lover of ninjago, I have 9 siblings, I'm always looking to learn, and improve my skills. I've been told I have a great imagination, just sometimes I don't know how to explain the things I think of, especially not my dreams."
-                android:padding="10dp"/>
-        </LinearLayout>
+            android:textColor="#0f5ff8"
+            android:text="I am Kenneth Payne, A Computer Science student, and a lover of ninjago, I have 9 siblings, I'm always looking to learn, and improve my skills. I've been told I have a great imagination, just sometimes I don't know how to explain the things I think of, especially not my dreams."
+            android:padding="10dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -68,6 +62,7 @@
                 android:textColor="#0f5ff8"
                 android:text="I have made this collage of characters and objects from my favorite shows and games, which basically just include my hobbies, which are: "
                 android:padding="10dp"
+                android:textSize="12sp"
                 android:layout_weight="1"/>
 
             <ImageView
@@ -83,6 +78,7 @@
             android:textColor="#0f5ff8"
             android:text="1. Playing Video Games&#xA;2. 3d modeling&#xA;3. 3d Printing&#xA;4. watching shows&#xA;5. playing outside"
             android:padding="15dp"
+            android:textSize="12sp"
             android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
