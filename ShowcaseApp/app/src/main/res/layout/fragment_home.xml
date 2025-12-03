@@ -21,7 +21,8 @@
         android:layout_gravity="fill_horizontal"
         android:background="@drawable/layout_background"
         android:padding="10dp"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="30dp"
+        android:clipToOutline="true">
 
 <!--    ChatGPT helped get this-->
         <com.google.android.material.imageview.ShapeableImageView
@@ -37,9 +38,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#0f5ff8"
+            android:textColor="#0ffff8"
             android:text="I am Kenneth Payne, A Computer Science student, and a lover of ninjago, I have 9 siblings, I'm always looking to learn, and improve my skills. I've been told I have a great imagination, just sometimes I don't know how to explain the things I think of, especially not my dreams."
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:background="#88000000"/>
     </LinearLayout>
 
     <LinearLayout
@@ -48,22 +50,24 @@
         android:orientation="vertical"
         android:background="@drawable/layout_background"
         android:padding="10dp"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:clipToOutline="true">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:orientation="horizontal"
-            android:layout_margin="15dp">
+            android:layout_margin="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
-                android:textColor="#0f5ff8"
+                android:textColor="#0ffff8"
                 android:text="I have made this collage of characters and objects from my favorite shows and games, which basically just include my hobbies, which are: "
                 android:padding="10dp"
                 android:textSize="12sp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:background="#88000000"/>
 
             <ImageView
                 android:layout_width="200dp"
@@ -75,11 +79,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#0f5ff8"
+            android:textColor="#0ffff8"
             android:text="1. Playing Video Games&#xA;2. 3d modeling&#xA;3. 3d Printing&#xA;4. watching shows&#xA;5. playing outside"
             android:padding="15dp"
             android:textSize="12sp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:background="#88000000"/>
 
     </LinearLayout>
 
