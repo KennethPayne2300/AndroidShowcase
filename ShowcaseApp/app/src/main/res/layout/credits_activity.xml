@@ -1,9 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="#1ff0a4"
+    tools:context=".ui.home.HomeFragment">
 
-    <FrameLayout
-        android:id="@+id/settings"
+    <TextView
+        style="@style/TitleTXTStyle"
+        android:id="@+id/text_home"
+        android:text="Credits"/>
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:text="App by: Kenneth Payne"
+        android:textColor="#f30523"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#f30523"
+        android:text="Guess a Number Instructions"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/layout_background"
+        android:clipToOutline="true"
+        android:padding="15dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Must enter a whole number that's 1-100, which means nothing zero or lower, or 101 or above"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="#444"
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Every time you get an answer correct you get points, 50 for winning, plus 5 per remaining guesses. (e.g. 5 guesses left: 50+(5*5)=75 points)"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="#444"
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="if you lose you don't get any points and the points you have will be your final score."
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="#444"
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="when you win you'll be sent to the next level, there's a total of 5 levels, it doesn't really get any harder but you'll be able to get more points. complete all 5 you win, and that score will be your final score"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="#444"
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Links"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#f30523"
+        android:layout_marginTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/layout_background"
+        android:clipToOutline="true"
+        android:padding="15dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Celebrating picture: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbCSuhHK9xTSp6wt3hxj2CYEtGPpN_TIvqYg&amp;s"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="#444"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"/>
+
+    </LinearLayout>
+
 </LinearLayout>
