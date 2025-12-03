@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShowcaseApp">
         <activity
+            android:name=".CreditsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_creditss"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
