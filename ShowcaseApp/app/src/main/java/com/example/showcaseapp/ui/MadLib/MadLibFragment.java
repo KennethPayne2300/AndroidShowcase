@@ -93,6 +93,16 @@ public class MadLibFragment extends Fragment {
                 number = binding.numberTXT.getText().toString();
                 sillyWord = binding.sillyWordTXT.getText().toString();
 
+                //remove the inputs from the EditTexts
+                binding.personsNameTXT.setText("");
+                binding.placeTXT.setText("");
+                binding.pluralAnimalTXT.setText("");
+                binding.pastVerbTXT.setText("");
+                binding.adjectiveTXT.setText("");
+                binding.nounTXT.setText("");
+                binding.numberTXT.setText("");
+                binding.sillyWordTXT.setText("");
+
                 //Makes the linear layout of the input page gone and makes the story layout visible to give the illusion of a different activity
                 binding.InputPage.setVisibility(View.GONE);
                 binding.storyLayout.setVisibility(View.VISIBLE);
