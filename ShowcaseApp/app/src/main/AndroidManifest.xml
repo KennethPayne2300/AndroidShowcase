@@ -14,7 +14,7 @@
         <activity
             android:name=".CreditsActivity"
             android:exported="false"
-            android:label="@string/title_activity_creditss"
+            android:label="@string/title_activity_credits"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"

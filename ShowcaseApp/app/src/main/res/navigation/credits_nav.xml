@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/credits_nav"
+    app:startDestination="@+id/nav_credits">
+
+    <fragment
+        android:id="@+id/nav_credits"
+        android:name="com.example.showcaseapp.CreditsFragment"
+        android:label="Credits"
+        tools:layout="@layout/fragment_credits"/>
+</navigation>
